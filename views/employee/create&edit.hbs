@@ -1,0 +1,80 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/employee" method="post">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter Your Name" value="{{employee.name}}">
+        <div class="text-danger">
+            {{employee.nameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" name="address" placeholder="Enter Your Address">
+    </div>
+    <div class="form-group">
+        <label>Pincode</label>
+        <input type="number" class="form-control" name="pincode" placeholder="Enter Your Pincode">
+    </div>
+    <div class="form-group">
+        <label>Gender</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Male">
+            <label class="form-check-label" for="exampleRadios1">
+                Male
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="Female">
+            <label class="form-check-label" for="exampleRadios2">
+                Female
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="number" class="form-control" name="number" placeholder="Enter Your Mobile Number"
+            value="{{employee.number}}">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Working Field:</label>
+        <select class="form-control" name="field" id="exampleFormControlSelect1">
+            <option>
+                <- Please Select ->
+            </option>
+            <option>App Developer</option>
+            <option>Software Developer</option>
+            <option>Web Developer</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email"
+            value="{{employee.email}}">
+        <div class="text-danger">
+            {{employee.emailError}}</div>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" name="file" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="check" value="Accepted" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                Please Accept the Terms and Conditions
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
